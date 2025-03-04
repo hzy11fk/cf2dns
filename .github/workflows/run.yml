@@ -7,14 +7,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: linux-latest
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
       - name: 'Set up Python'
         uses: actions/setup-python@v4
         with:
-          python-version: 3.7.17
+          python-version: 3.7
       - name: 'Install dependencies'
         run: if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: 'run cf2dns'
